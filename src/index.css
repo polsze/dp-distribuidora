@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/* Animaciones base */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animaciones específicas para las máquinas */
+@keyframes machineEnterLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.8);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes machineEnterRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px) scale(0.8);
+  }
+  to {
+    opacity: 0.95;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes machineFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+/* Clases de animación */
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 1.2s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 1.2s ease-out forwards;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 1s ease-out forwards;
+}
+
+.animate-slideInDown {
+  animation: slideInDown 1s ease-out forwards;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Animaciones especiales para máquinas */
+.animate-machine-enter-left {
+  animation: machineEnterLeft 1.5s ease-out forwards, machineFloat 8s ease-in-out infinite 1.5s;
+}
+
+.animate-machine-enter-right {
+  animation: machineEnterRight 1.5s ease-out forwards, machineFloat 7s ease-in-out infinite 1.5s;
+}
