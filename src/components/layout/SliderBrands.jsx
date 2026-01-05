@@ -4,14 +4,14 @@ import { useRef, useEffect } from 'react';
 const InfiniteLogoCarousel = () => {
   const carouselRef = useRef(null);
   const logos = [
-    { src: '/src/assets/images/logo-case.png', alt: 'CASE Construction Equipment' },
-    { src: '/src/assets/images/logo-john-deere.png', alt: 'John Deere' },
-    { src: '/src/assets/images/logo-cat.png', alt: 'Caterpillar' },
-    { src: '/src/assets/images/logo-doosan.png', alt: 'Doosan' },
-    { src: '/src/assets/images/logo-hyundai.png', alt: 'Hyundai Heavy Industries' },
-    { src: '/src/assets/images/logo-komatsu.png', alt: 'Komatsu' },
-    { src: '/src/assets/images/logo-new-holland.png', alt: 'New Holland' },
-    { src: '/src/assets/images/logo-volvo.png', alt: 'Volvo Construction Equipment' },
+    { src: '/images/logo-case.png', alt: 'CASE Construction Equipment' },
+    { src: '/images/logo-john-deere.png', alt: 'John Deere' },
+    { src: '/images/logo-cat.png', alt: 'Caterpillar' },
+    { src: '/images/logo-doosan.png', alt: 'Doosan' },
+    { src: '/images/logo-hyundai.png', alt: 'Hyundai Heavy Industries' },
+    { src: '/images/logo-komatsu.png', alt: 'Komatsu' },
+    { src: '/images/logo-new-holland.png', alt: 'New Holland' },
+    { src: '/images/logo-volvo.png', alt: 'Volvo Construction Equipment' },
   ];
 
   // Duplicar los logos para el efecto infinito suave
