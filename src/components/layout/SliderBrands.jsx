@@ -60,15 +60,15 @@ const InfiniteLogoCarousel = () => {
         {/* Título */}
         <div className="text-center mb-12">
           <span className="inline-block mb-4 px-6 py-2 text-sm font-semibold text-yellow-400 bg-yellow-500/10 rounded-full border border-yellow-500/20">
-            MARCAS LÍDERES
+          CALIDAD GARANTIZADA
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             <span className="bg-linear-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent">
-              Distribuidores Oficiales
+            Marcas líderes en repuestos de maquinaria vial y minera
             </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Representamos a las principales marcas mundiales de maquinaria vial pesada
+            Representamos a las principales marcas mundiales de maquinaria vial y minera.
           </p>
         </div>
 

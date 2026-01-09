@@ -34,14 +34,14 @@ const Navbar = () => {
           
           <div className="flex items-center gap-6">
             <a 
-              href="tel:+5493764222222" 
+              href="tel:+5493765377866" 
               className="flex items-center gap-2 hover:text-yellow-400 transition-colors"
             >
               <Phone size={16} />
-              <span className="font-semibold">+54 9 3764 22-2222</span>
+              <span className="font-semibold">3765 377866</span>
             </a>
             <a 
-              href="https://wa.me/5493764222222" 
+              href="https://wa.me/5493765377866" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-linear-to-r from-yellow-500 to-yellow-600 text-gray-900 px-4 py-1 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-yellow-500/30 transition-all"

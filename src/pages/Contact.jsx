@@ -1,5 +1,5 @@
-// src/pages/Contact.jsx
 import SEO from "../components/SEO";
+import emailjs from "@emailjs/browser";
 import { useState, useRef } from "react";
 import { 
   Phone, 
@@ -70,24 +70,33 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-    
+  
+    if (!validateForm()) return;
+  
     setIsSubmitting(true);
     setSubmitStatus(null);
-    
-    // Simulación de envío del formulario
-    setTimeout(() => {
-      console.log("Formulario enviado:", formData);
-      setIsSubmitting(false);
+  
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+  
       setSubmitStatus({
         type: "success",
-        message: "¡Mensaje enviado con éxito! Te contactaremos dentro de las próximas 24 horas."
+        message:
+          "¡Mensaje enviado correctamente! Nuestro equipo se contactará con usted a la brevedad."
       });
-      
-      // Reset form
+  
       setFormData({
         name: "",
         company: "",
@@ -96,16 +105,17 @@ const Contact = () => {
         subject: "",
         message: ""
       });
-      
-      // Scroll to success message
-      setTimeout(() => {
-        const successElement = document.querySelector('[data-success="true"]');
-        if (successElement) {
-          successElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-      
-    }, 1500);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+  
+      setSubmitStatus({
+        type: "error",
+        message:
+          "No pudimos enviar el mensaje. Intente nuevamente o contáctenos por WhatsApp."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactMethods = [
@@ -123,7 +133,7 @@ const Contact = () => {
       title: "WhatsApp",
       value: "Chat en vivo",
       description: "Respuesta inmediata",
-      action: "https://wa.me/5493764222222",
+      action: "https://wa.me/5493765377866",
       color: "bg-green-500/10 border-green-500/20",
       iconColor: "text-green-600"
     },
@@ -159,14 +169,13 @@ const Contact = () => {
     <>
       <SEO
         title="Contacto | DP Distribuidora"
-        description="Contáctanos para consultas, cotizaciones y soporte técnico. Estamos aquí para ayudarte con tus necesidades de repuestos para maquinaria vial."
-        keywords="contacto, consulta, cotización, soporte técnico, repuestos maquinaria"
+        description="Contáctanos para consultas, cotizaciones y soporte técnico de repuestos de maquinaria vial y minera"
+        keywords="contacto, consulta, cotización, soporte técnico, repuestos maquinaria, vial, minera"
         canonical="https://dpdistribuidora.com.ar/contacto"
       />
 
       {/* ============ HERO CONTACTO ============ */}
       <section className="relative py-20 md:py-28 overflow-hidden bg-linear-to-br from-gray-900 via-black to-gray-900 text-white">
-        {/* Efectos de fondo */}
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-yellow-500 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-yellow-500 to-transparent"></div>
@@ -520,7 +529,7 @@ const Contact = () => {
                     }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 rounded-lg bg-yellow-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                      <div className="w-8 h-8 rounded-lg bg-yellow-500/20 flex items-center justify-center shrink-0 mt-1">
                         <CheckCircle className="text-yellow-400" size={16} />
                       </div>
                       <div>
@@ -535,7 +544,7 @@ const Contact = () => {
               {/* Botones de acción rápida */}
               <div className="space-y-4">
                 <a
-                  href="https://wa.me/5493764222222?text=Hola%20DP%20Distribuidora,%20necesito%20hacer%20una%20consulta%20urgente."
+                  href="https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20necesito%20hacer%20una%20consulta%20"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between bg-green-50 hover:bg-green-100 border border-green-200 rounded-xl p-4 transition-all duration-300"
@@ -553,7 +562,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="tel:+5493764222222"
+                  href="tel:+5493765377866"
                   className="group flex items-center justify-between bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl p-4 transition-all duration-300"
                 >
                   <div className="flex items-center gap-3">
@@ -571,16 +580,14 @@ const Contact = () => {
 
               {/* Redes sociales */}
               <div className="mt-8 pt-8 border-t border-gray-200">
-                <h4 className="font-bold text-gray-900 mb-4">Síganos en redes</h4>
+                <h4 className="font-bold text-gray-900 mb-4">Síganos en instagram</h4>
                 <div className="flex gap-4">
                   {[
-                    { icon: Facebook, label: "Facebook", color: "bg-blue-500/10 hover:bg-blue-500/20 text-blue-600" },
                     { icon: Instagram, label: "Instagram", color: "bg-pink-500/10 hover:bg-pink-500/20 text-pink-600" },
-                    { icon: Linkedin, label: "LinkedIn", color: "bg-blue-600/10 hover:bg-blue-600/20 text-blue-700" }
                   ].map((social, index) => (
                     <a
                       key={index}
-                      href="#"
+                      href="https://www.instagram.com/dpdistribuidorasrl/"
                       className={`w-12 h-12 rounded-xl ${social.color} flex items-center justify-center transition-all duration-300 hover:scale-110`}
                       aria-label={social.label}
                     >
@@ -602,13 +609,13 @@ const Contact = () => {
               Nuestra <span className="text-yellow-600">Ubicación</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Operamos desde Posadas, Misiones, con capacidad de envío a todo el país
+              Operamos desde Posadas, Misiones, con capacidad de envío a todo el país. Próximamente también en Córdoba Capital.
             </p>
           </div>
 
           <div className="relative rounded-3xl overflow-hidden border border-gray-300 shadow-xl">
-            {/* Mapa placeholder - Puedes reemplazar con Google Maps o Mapbox */}
-            <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+            
+            <div className="aspect-video bg-linear-to-br from-gray-200 to-gray-300 flex items-center justify-center">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-yellow-500/20 mb-6">
                   <MapPin className="text-yellow-600" size={36} />
@@ -629,15 +636,6 @@ const Contact = () => {
                   <h4 className="font-bold text-gray-900">DP Distribuidora S.R.L.</h4>
                   <p className="text-gray-600">Distribuidores oficiales de repuestos para maquinaria vial</p>
                 </div>
-                <a
-                  href="https://maps.google.com/?q=Posadas,Misiones"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-linear-to-r from-yellow-500 to-yellow-600 text-gray-900 px-6 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-yellow-500/30 transition-all"
-                >
-                  <MapPin size={18} />
-                  Ver en Google Maps
-                </a>
               </div>
             </div>
           </div>

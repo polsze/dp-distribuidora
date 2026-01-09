@@ -1,4 +1,3 @@
-// src/pages/Products.jsx
 import SEO from "../components/SEO";
 import { useState, useEffect, useRef } from "react";
 import { 
@@ -256,8 +255,8 @@ const Products = () => {
     <>
       <SEO
         title="Tipos de Repuestos | DP Distribuidora"
-        description="Distribuimos todo tipo de repuestos para maquinaria vial pesada: sistemas de motor, hidráulica, tren rodante, eléctricos y más."
-        keywords="tipos repuestos maquinaria, sistemas motor, hidráulica maquinaria, tren rodante, repuestos eléctricos"
+        description="Distribuimos todo tipo de repuestos para maquinaria vial y minera"
+        keywords="tipos repuestos maquinaria, sistemas motor, hidráulica maquinaria, tren rodante, repuestos eléctricos, maquinaria vial, maquinaria minera"
         canonical="https://dpdistribuidora.com.ar/productos"
       />
 
@@ -286,12 +285,12 @@ const Products = () => {
                   Tipos de Repuestos
                 </span>
                 <br />
-                <span className="text-white">Para Maquinaria Vial</span>
+                <span className="text-white">Para Maquinaria Vial y Minera</span>
               </h1>
 
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
                 Distribuimos todos los tipos de repuestos esenciales para el funcionamiento 
-                óptimo de su maquinaria vial pesada. Calidad garantizada y compatibilidad 
+                óptimo de su maquinaria pesada. Calidad OEM y compatibilidad 
                 con las principales marcas del mercado.
               </p>
 
@@ -379,7 +378,7 @@ const Products = () => {
                       <ul className="space-y-2">
                         {type.items.slice(0, 4).map((item, idx) => (
                           <li key={idx} className="flex items-center gap-3">
-                            <CheckCircle size={14} className="text-green-500 flex-shrink-0" />
+                            <CheckCircle size={14} className="text-green-500 shrink-0" />
                             <span className="text-sm text-gray-700">{item}</span>
                           </li>
                         ))}
@@ -449,7 +448,7 @@ const Products = () => {
                           <div className="grid grid-cols-2 gap-3">
                             {type.items.map((item, idx) => (
                               <div key={idx} className="flex items-start gap-2">
-                                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-yellow-500 flex-shrink-0"></div>
+                                <div className="mt-1 w-1.5 h-1.5 rounded-full bg-yellow-500 shrink-0"></div>
                                 <span className="text-sm text-gray-700">{item}</span>
                               </div>
                             ))}
@@ -474,13 +473,13 @@ const Products = () => {
                         {/* CTA para consultas */}
                         <div className="pt-4 border-t border-gray-100">
                           <a
-                            href={`https://wa.me/5493764222222?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20repuestos%20de:%20${encodeURIComponent(type.name)}`}
+                            href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20repuestos%20de:%20${encodeURIComponent(type.name)}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-2 w-full bg-linear-to-r from-yellow-500 to-yellow-600 text-gray-900 py-3 rounded-xl font-bold hover:shadow-lg hover:shadow-yellow-500/30 transition-all"
                           >
                             <Wrench size={18} />
-                            Consultar por estos repuestos
+                            Consulte YA!
                           </a>
                         </div>
                       </div>
@@ -599,7 +598,7 @@ const Products = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a
-                href="https://wa.me/5493764222222?text=Hola%20DP%20Distribuidora,%20necesito%20consultar%20por%20repuestos%20para%20mi%20maquinaria%20vial."
+                href="https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20necesito%20consultar%20por%20repuestos%20para%20mi%20maquinaria%20vial."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 bg-linear-to-r from-yellow-500 to-yellow-600 text-gray-900 px-10 py-4 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300"
@@ -609,7 +608,7 @@ const Products = () => {
               </a>
 
               <a
-                href="tel:+5493764222222"
+                href="tel:+5493765377866"
                 className="inline-flex items-center justify-center gap-3 bg-transparent text-white px-10 py-4 rounded-2xl font-bold text-lg border-2 border-white/30 hover:border-yellow-500 hover:bg-yellow-500/10 transition-all duration-300"
               >
                 <span className="text-xl">📞</span>

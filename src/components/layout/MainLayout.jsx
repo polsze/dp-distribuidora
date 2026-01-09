@@ -1,23 +1,24 @@
 // src/components/layout/MainLayout.jsx
-import { Outlet } from "react-router-dom";
-import TopBar from "./TopBar";
+import { Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const MainLayout = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="flex flex-col min-h-screen">
-     
-
-      {/* Navegación principal */}
       <Navbar />
 
-      {/* Contenido dinámico */}
       <main className="grow">
         <Outlet />
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

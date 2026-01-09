@@ -157,16 +157,11 @@ const Home = () => {
               {/* COLUMNA IZQUIERDA - TEXTO PRINCIPAL */}
               <FadeInSection delay={300}>
                 <div className="relative">
-                
-
                   {/* Título principal */}
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
                     <span className="block text-white">Repuestos para</span>
                     <span className="block bg-linear-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent">
-                      Maquinaria Vial
-                    </span>
-                    <span className="block bg-linear-to-r from-yellow-500 via-yellow-400 to-yellow-500 bg-clip-text text-transparent">
-                      Pesada
+                      Maquinaria Vial y Minera
                     </span>
                   </h1>
 
@@ -239,7 +234,6 @@ const Home = () => {
                   </div>
                 </div>
               </FadeInSection>
-                          
             </div>
           </div>
         </div>
@@ -334,8 +328,9 @@ const Home = () => {
             {[
               {
                 icon: Boxes,
-                title: "Stock Permanente",
-                text: "Amplio inventario de repuestos listos para entrega inmediata y reposición continua.",
+                title: "Disponibilidad de repuestos viales y mineros",
+                text: "Acceso a repuestos de múltiples marcas que se adaptan a las necesidades específicas de cada equipo y obra.",
+                subtitle: "Variedad y compatibilidad garantizada",
                 image: stockImg,
                 color: "from-blue-500/5 to-cyan-500/5",
               },
@@ -398,8 +393,8 @@ const Home = () => {
 
                       {/* Indicador visual de hover */}
                       <div className="flex items-center justify-between pt-6 border-t border-gray-100 group-hover:border-yellow-400/30 transition-colors duration-300">
-                        <span className="text-sm text-gray-500 font-medium">
-                          Beneficio exclusivo
+                        <span className="text-sm text-gray-500">
+                          {item.subtitle}
                         </span>
                         <div className="w-6 h-6 rounded-full bg-gray-100 group-hover:bg-yellow-500 transition-colors duration-300 flex items-center justify-center">
                           <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
@@ -634,21 +629,21 @@ const Home = () => {
                         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
                           <div className="flex-1">
                             <h4 className="text-xl font-bold text-white mb-2">
-                              ¿Opera en zonas de difícil acceso?
+                              ¿Buscás repuestos para maquinaria vial o minera?
                             </h4>
                             <p className="text-yellow-200/80 text-sm">
-                              Tenemos soluciones logísticas especializadas para
-                              obras remotas
+                              Te ayudamos a identificar el repuesto adecuado
+                              según la marca y el modelo de tu equipo.
                             </p>
                           </div>
                           <a
-                            href="https://wa.me/549XXXXXXXXXX?text=Hola%20DP%20Distribuidora,%20necesito%20consultar%20disponibilidad%20para%20una%20zona%20específica%20del%20país."
+                            href="https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20necesito%20consultar%20por%20repuestos%20para%20maquinaria%20vial%20/%20minera."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-3 bg-linear-to-r from-yellow-500 to-yellow-600 text-black px-10 py-4 rounded-xl font-bold shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 whitespace-nowrap"
                           >
-                            <span className="text-xl">🗺️</span>
-                            Consultar Cobertura por Zona
+                            <span className="text-xl">🔧</span>
+                            Consultar Repuestos
                           </a>
                         </div>
                       </div>
@@ -663,18 +658,16 @@ const Home = () => {
               <div className="relative h-full">
                 {/* Efecto de fondo para el mapa */}
                 <div className="absolute -inset-4 bg-linear-to-br from-gray-800/20 to-black/20 rounded-3xl blur-xl"></div>
-                      
+
                 <div className="relative h-full bg-linear-to-b from-gray-800/40 to-black/40 rounded-3xl border border-gray-700/30 backdrop-blur-lg overflow-hidden">
                   {/* Encabezado del mapa */}
                   <div className="p-6 border-b border-gray-700/30">
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-white">
-                          Cobertura en todo el territorio argentino        
+                          Cobertura en todo el territorio argentino
                         </h3>
-                        <p className="text-sm text-gray-400">
-                          
-                        </p>
+                        <p className="text-sm text-gray-400"></p>
                       </div>
                       <div className="w-10 h-10 rounded-lg bg-linear-to-br from-yellow-500/20 to-yellow-600/20 flex items-center justify-center">
                         <span className="text-yellow-400 text-lg">📍</span>
@@ -746,15 +739,13 @@ const Home = () => {
                         <div className="text-xs text-gray-500">
                           En tiempo real
                         </div>
-                        
                       </div>
-                      
                     </div>
                     <img
-                                src={logo}
-                                alt="DP Distribuidora Logo"
-                                className="h-24 w-24 m-auto mt-6"
-                              />
+                      src={logo}
+                      alt="DP Distribuidora Logo"
+                      className="h-24 w-24 m-auto mt-6"
+                    />
                   </div>
                 </div>
               </div>
@@ -797,7 +788,7 @@ const Home = () => {
                     value: "15+",
                     label: "Años Operando",
                     icon: "🏆",
-                    desc: "Experiencia nacional",
+                    desc: "Experiencia nacional e internacional",
                   },
                 ].map((stat, i) => (
                   <div
@@ -920,14 +911,11 @@ const Home = () => {
                 <span className="text-yellow-600 font-bold">
                   DP Distribuidora
                 </span>{" "}
-                comercializamos repuestos de
-                <span className="text-gray-900 font-bold">
-                  {" "}
-                  alta calidad certificada{" "}
-                </span>
+                comercializamos repuestos con
+                <span className="text-gray-900 font-bold"> calidad OEM </span>
                 para{" "}
                 <span className="text-gray-900 font-bold">
-                  maquinaria vial pesada
+                  maquinaria vial y minera
                 </span>
                 , garantizando compatibilidad, durabilidad y rendimiento en
                 condiciones de trabajo exigentes.
@@ -1134,7 +1122,7 @@ const Home = () => {
                                 animationDelay: `${400 + i * 100 + idx * 50}ms`,
                               }}
                             >
-                              <div className="flex-shrink-0">
+                              <div className="shrink-0">
                                 <div className="w-2 h-2 rounded-full bg-yellow-500 group-hover:scale-125 transition-transform duration-300"></div>
                               </div>
                               <span className="text-gray-800 font-medium group-hover:text-gray-900 transition-colors duration-300">
@@ -1316,9 +1304,11 @@ const Home = () => {
                 <span className="text-yellow-400 font-semibold">
                   años de experiencia
                 </span>{" "}
-                y capacitación continua, nuestro servicio técnico asegura un
-                soporte confiable y eficiente, optimizando la operación de sus
-                equipos y reduciendo costos a largo plazo.
+                en el sector de maquinaria vial y minera y una capacitación
+                técnica continua, nuestros colaboradores técnicos brindan un
+                soporte confiable en repuestos para maquinaria pesada, ayudando
+                a optimizar el rendimiento de los equipos y a reducir costos
+                operativos a largo plazo.
               </p>
             </div>
           </FadeInSection>
@@ -1366,7 +1356,7 @@ const Home = () => {
                     <div className="flex items-center gap-3">
                       <CheckCircle className="text-yellow-500" size={20} />
                       <span className="text-sm font-medium">
-                        Repuestos originales
+                        Repuestos originales y alternativos
                       </span>
                     </div>
                   </div>
@@ -1445,14 +1435,14 @@ const Home = () => {
                       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                         <div>
                           <h4 className="text-lg font-bold text-white mb-1">
-                            ¿Necesita asistencia técnica urgente?
+                            ¿Necesita asistencia técnica?
                           </h4>
                           <p className="text-yellow-200 text-sm">
                             Nuestro equipo está listo para responder
                           </p>
                         </div>
                         <a
-                          href="https://wa.me/549XXXXXXXXXX?text=Hola%20DP%20Distribuidora,%20necesito%20asistencia%20técnica%20para%20mi%20maquinaria%20vial."
+                          href="https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20necesito%20asistencia%20técnica%20para%20mi%20maquinaria%20pesada."
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-3 bg-linear-to-r from-yellow-500 to-yellow-600 text-black px-8 py-3 rounded-xl font-bold shadow-lg hover:shadow-yellow-500/25 hover:scale-105 transition-all duration-300 whitespace-nowrap"
@@ -1508,20 +1498,20 @@ const Home = () => {
                     key={i}
                     className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/30 hover:border-yellow-500/30 transition-all duration-300"
                   >
-                    <div className="text-yellow-400 text-4xl mb-4">"</div>
-                    <p className="text-gray-300 italic mb-6">
+                    {/*<div className="text-yellow-400 text-4xl mb-4">"</div> */}
+                    <p className="text-gray-300 italic">
                       {testimonial.quote}
                     </p>
-                    <div className="pt-4 border-t border-gray-700/30">
+                   {/*  <div className="pt-4 border-t border-gray-700/30">
                       <div className="font-bold text-white">
                         {testimonial.company}
                       </div>
                       <div className="text-sm text-gray-400">
                         {testimonial.role}
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    </div>*/}
+                  </div>  
+                ))} 
               </div>
             </div>
           </FadeInSection>
