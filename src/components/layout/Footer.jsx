@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       {/* CONTENIDO PRINCIPAL */}
-      <div className="max-w-7xl mx-auto px-4 py-16 grid gap-12  md:grid-cols-4 ">
+      <div className="max-w-7xl mx-auto px-2 py-16 flex flex-col gap-12  lg:grid lg:grid-cols-4">
         {/* MARCA + LOGO */}
         <div>
           {/* LOGO */}
@@ -16,7 +16,7 @@ const Footer = () => {
           />
 
           {/* DESCRIPCIÓN */}
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-center">
             Especialistas en repuestos para maquinaria vial y minera.
             Distribución desde Misiones a todo el país.
           </p>
@@ -71,19 +71,19 @@ const Footer = () => {
               <span> +54 9 3765 37-7866</span>
             </li>
             <li className="flex items-center gap-3">
-              <Phone size={16} />
+              <Phone size={16} className="shrink-0"/>
               <span> +54 9 3512 02-3971</span>
             </li>
             <li className="flex items-center gap-3">
-              <Mail size={16} />
+              <Mail size={16} className="shrink-0"/>
               <span>info@dpdistribuidora.com.ar</span>
             </li>
             <li className="flex items-center gap-3">
-              <Mail size={16} />
+              <Mail size={16} className="shrink-0"/>
               <span>ventas@dpdistribuidora.com.ar</span>
             </li>
             <li className="flex items-center gap-3">
-              <Mail size={16} />
+              <Mail size={16} className="shrink-0"/>
               <span>repuestos@dpdistribuidora.com.ar</span>
             </li>
             <li className="flex items-center gap-3">

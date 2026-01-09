@@ -549,10 +549,10 @@ const Products = () => {
               {featuredBrands.map((brand, index) => (
                 <div 
                   key={brand}
-                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300 group"
+                  className="bg-white rounded-2xl p-4 border border-gray-200 hover:border-yellow-400 hover:shadow-lg transition-all duration-300 group"
                 >
                   <div className="text-center">
-                    <div className="text-xl font-bold text-gray-900 mb-2 group-hover:text-yellow-700 transition-colors">
+                    <div className="text-base text-center font-bold text-gray-900 mb-2 group-hover:text-yellow-700 transition-colors">
                       {brand}
                     </div>
                     <div className="text-sm text-gray-500">

@@ -588,6 +588,7 @@ const Contact = () => {
                     <a
                       key={index}
                       href="https://www.instagram.com/dpdistribuidorasrl/"
+                      target="_blank"
                       className={`w-12 h-12 rounded-xl ${social.color} flex items-center justify-center transition-all duration-300 hover:scale-110`}
                       aria-label={social.label}
                     >
@@ -602,7 +603,7 @@ const Contact = () => {
       </section>
 
       {/* ============ MAPA UBICACIÓN ============ */}
-      <section className="relative py-20 bg-gray-50">
+      <section className="relative py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -615,14 +616,14 @@ const Contact = () => {
 
           <div className="relative rounded-3xl overflow-hidden border border-gray-300 shadow-xl">
             
-            <div className="aspect-video bg-linear-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-yellow-500/20 mb-6">
+            <div className="aspect-video bg-linear-to-br from-gray-200 to-gray-300 flex items-center justify-center h-auto">
+              <div className="text-center h-96 md:h-auto">
+                <div className="inline-flex items-center justify-center mt-2 w-12 h-12 rounded-full bg-yellow-500/20 mb-6 md:h-20 md:w-20">
                   <MapPin className="text-yellow-600" size={36} />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Posadas, Misiones</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Itaembé Guazú, Posadas, Misiones</h3>
                 <p className="text-gray-600">Base operativa principal</p>
-                <div className="mt-6 inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-lg">
+                <div className="mt-6 inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-lg md:mb-12">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                   <span className="font-medium text-gray-900">Envios a todo el país</span>
                 </div>

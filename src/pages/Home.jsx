@@ -1,8 +1,8 @@
 import SEO from "../components/SEO";
 import ArgentinaMap from "../components/home/ArgentinaMap";
-import maquinariaImg from "../assets/images/maquinaria.png";
-import maquinariaImg2 from "../assets/images/maquinaria-2.png";
-import BGHero from "../assets/images/BG-hero-dp-distribuidora.png";
+import maquinariaImg from "../assets/images/maquinaria.webp";
+import maquinariaImg2 from "../assets/images/maquinaria-2.webp";
+import BGHero from "../assets/images/BG-hero-dp-distribuidora.webp";
 import logo from "../assets/images/dp-distribuidora-logo.png";
 import {
   Boxes,
@@ -14,11 +14,10 @@ import {
   Zap,
   CheckCircle,
 } from "lucide-react";
-import stockImg from "../assets/images/deposito-dp-distribuidora.png";
-import envioImg from "../assets/images/envios-dp-distribuidora.png";
-import asesoramientoImg from "../assets/images/asesoramiento-dp-distribuidora.png";
+import stockImg from "../assets/images/deposito-dp-distribuidora.webp";
+import envioImg from "../assets/images/envios-dp-distribuidora.webp";
+import asesoramientoImg from "../assets/images/asesoramiento-dp-distribuidora.webp";
 import { useState, useEffect, useRef } from "react";
-import Infinite from "../components/layout/SliderBrands";
 import InfiniteLogoCarousel from "../components/layout/SliderBrands";
 
 // Componente simple para animaciones
@@ -123,8 +122,8 @@ const Home = () => {
     <>
       <SEO
         title="DP Distribuidora | Repuestos para Maquinaria Vial Pesada"
-        description="DP Distribuidora en Posadas, Misiones. Repuestos para maquinaria vial pesada con envíos a todo el país."
-        keywords="repuestos maquinaria vial, maquinaria pesada, Posadas Misiones"
+        description="DP Distribuidora repuestos para maquinaria vial y minera con envíos a todo el país en Posadas, Misiones"
+        keywords="repuestos maquinaria vial, maquinaria pesada, maquinaria minera, repuestos, Posadas, Misiones"
         canonical="https://dpdistribuidora.com.ar/"
       />
 
@@ -158,7 +157,7 @@ const Home = () => {
               <FadeInSection delay={300}>
                 <div className="relative">
                   {/* Título principal */}
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                  <h1 className="text-4xl lg:text-7xl font-bold leading-tight mb-6">
                     <span className="block text-white">Repuestos para</span>
                     <span className="block bg-linear-to-r from-yellow-400 via-yellow-300 to-yellow-400 bg-clip-text text-transparent">
                       Maquinaria Vial y Minera
@@ -328,7 +327,7 @@ const Home = () => {
             {[
               {
                 icon: Boxes,
-                title: "Disponibilidad de repuestos viales y mineros",
+                title: "Disponibilidad de repuestos",
                 text: "Acceso a repuestos de múltiples marcas que se adaptan a las necesidades específicas de cada equipo y obra.",
                 subtitle: "Variedad y compatibilidad garantizada",
                 image: stockImg,
@@ -338,13 +337,15 @@ const Home = () => {
                 icon: Truck,
                 title: "Cobertura Nacional",
                 text: "Despachamos a todas las provincias con operadores logísticos confiables y seguimiento en tiempo real.",
+                subtitle: "Envíos a todo el país",
                 image: envioImg,
                 color: "from-emerald-500/5 to-green-500/5",
               },
               {
                 icon: Wrench,
                 title: "Asesoramiento Técnico",
-                text: "Expertos que ayudan a seleccionar el repuesto correcto según equipo, marca y aplicación.",
+                text: "Expertos que ayudan a seleccionar el repuesto correcto según equipo, marca y aplicación. Haga su consulta.",
+                subtitle: "Soporte profesional",
                 image: asesoramientoImg,
                 color: "from-amber-500/5 to-orange-500/5",
               },
@@ -589,7 +590,7 @@ const Home = () => {
                           {/* Contenido */}
                           <div className="flex-1">
                             <div className="flex items-center justify-between mb-2">
-                              <h4 className="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                              <h4 className="text-lg font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
                                 {item.title}
                               </h4>
                               <div className="w-2 h-2 rounded-full bg-gray-600 group-hover:bg-yellow-500 transition-colors duration-300"></div>
@@ -640,7 +641,7 @@ const Home = () => {
                             href="https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20necesito%20consultar%20por%20repuestos%20para%20maquinaria%20vial%20/%20minera."
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 bg-linear-to-r from-yellow-500 to-yellow-600 text-black px-10 py-4 rounded-xl font-bold shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 whitespace-nowrap"
+                            className="inline-flex items-center  gap-3 bg-linear-to-r from-yellow-500 to-yellow-600 text-black px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 whitespace-nowrap"
                           >
                             <span className="text-xl">🔧</span>
                             Consultar Repuestos
@@ -939,7 +940,7 @@ const Home = () => {
                   {/* Imagen con animación mejorada */}
                   <AnimatedImage
                     src={maquinariaImg2}
-                    alt="Excavadora de obra - Maquinaria vial pesada"
+                    alt="Excavadora de obra - Maquinaria vial pesada - DP DISTRIBUIDORA"
                     className="relative w-120 xl:w-150 opacity-95 drop-shadow-2xl transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700"
                     animation="slideLeft"
                     delay={300}
@@ -975,7 +976,7 @@ const Home = () => {
                   {/* Imagen con animación mejorada */}
                   <AnimatedImage
                     src={maquinariaImg}
-                    alt="Motoniveladora - Maquinaria vial pesada"
+                    alt="Motoniveladora - Maquinaria vial pesada - DP DISTRIBUIDORA"
                     className="relative w-120 xl:w-150 opacity-95 drop-shadow-2xl transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700"
                     animation="slideRight"
                     delay={500}
@@ -1186,7 +1187,7 @@ const Home = () => {
                           },
                           {
                             value: "ISO 9001",
-                            label: "Certificación",
+                            label: "Garantía",
                             icon: "📋",
                           },
                           {
@@ -1194,14 +1195,14 @@ const Home = () => {
                             label: "Tolerancia fallas",
                             icon: "✅",
                           },
-                          { value: "24h", label: "Disponibilidad", icon: "⏱️" },
+                          { value: "24h", label: "Soporte", icon: "⏱️" },
                         ].map((stat, i) => (
                           <div
                             key={i}
                             className="text-center p-6 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/10 hover:border-yellow-500/30 transition-all duration-300"
                           >
                             <div className="text-3xl mb-3">{stat.icon}</div>
-                            <div className="text-3xl font-bold text-white mb-2">
+                            <div className="text-xl font-bold text-white mb-2">
                               {stat.value}
                             </div>
                             <div className="text-sm text-gray-300">
@@ -1314,7 +1315,7 @@ const Home = () => {
           </FadeInSection>
 
           {/* Contenido principal */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
             {/* Columna izquierda - Beneficios destacados */}
             <FadeInSection delay={300} className="order-2 lg:order-1">
               <div className="space-y-8">
@@ -1445,7 +1446,7 @@ const Home = () => {
                           href="https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20necesito%20asistencia%20técnica%20para%20mi%20maquinaria%20pesada."
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-3 bg-linear-to-r from-yellow-500 to-yellow-600 text-black px-8 py-3 rounded-xl font-bold shadow-lg hover:shadow-yellow-500/25 hover:scale-105 transition-all duration-300 whitespace-nowrap"
+                          className="inline-flex items-center gap-3 bg-linear-to-r from-yellow-500 to-yellow-600 text-black px-4 py-3 rounded-xl font-bold shadow-lg hover:shadow-yellow-500/25 hover:scale-105 transition-all duration-300 whitespace-nowrap"
                         >
                           <Wrench size={20} />
                           Solicitar asistencia técnica
@@ -1499,10 +1500,8 @@ const Home = () => {
                     className="bg-gray-800/30 rounded-xl p-6 border border-gray-700/30 hover:border-yellow-500/30 transition-all duration-300"
                   >
                     {/*<div className="text-yellow-400 text-4xl mb-4">"</div> */}
-                    <p className="text-gray-300 italic">
-                      {testimonial.quote}
-                    </p>
-                   {/*  <div className="pt-4 border-t border-gray-700/30">
+                    <p className="text-gray-300 italic">{testimonial.quote}</p>
+                    {/*  <div className="pt-4 border-t border-gray-700/30">
                       <div className="font-bold text-white">
                         {testimonial.company}
                       </div>
@@ -1510,8 +1509,8 @@ const Home = () => {
                         {testimonial.role}
                       </div>
                     </div>*/}
-                  </div>  
-                ))} 
+                  </div>
+                ))}
               </div>
             </div>
           </FadeInSection>

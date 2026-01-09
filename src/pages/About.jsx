@@ -140,8 +140,8 @@ const About = () => {
     <>
       <SEO
         title="Sobre Nosotros | DP Distribuidora"
-        description="Más de 15 años distribuyendo repuestos para maquinaria vial pesada. Calidad, experiencia y compromiso con cada cliente."
-        keywords="sobre nosotros, historia, valores, equipo, maquinaria pesada, repuestos"
+        description="Más de 15 años distribuyendo repuestos para maquinaria vial y minera. Calidad, experiencia y compromiso con cada cliente."
+        keywords="sobre nosotros, historia, valores, equipo, maquinaria pesada, maquinaria vial, maquinaria minera, repuestos"
         canonical="https://dpdistribuidora.com.ar/sobre-nosotros"
       />
 
