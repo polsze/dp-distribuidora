@@ -172,7 +172,7 @@ const Home = () => {
                     <p className="text-xl text-gray-300 leading-relaxed">
                       Distribuimos{" "}
                       <span className="text-yellow-400 font-semibold">
-                        repuestos originales
+                        repuestos alternativos calidad OEM
                       </span>{" "}
                       desde
                       <span className="text-white font-bold">
@@ -315,7 +315,7 @@ const Home = () => {
                   <span className="text-yellow-600 font-semibold">
                     soluciones reales
                   </span>{" "}
-                  en repuestos para maquinaria vial pesada, combinando
+                  en repuestos para maquinaria vial y minera pesada, combinando
                   experiencia técnica con capacidad operativa.
                 </p>
               </div>
@@ -486,7 +486,7 @@ const Home = () => {
                       Posadas, Misiones
                     </span>
                     , abasteciendo obras, empresas constructoras y flotas de
-                    maquinaria vial en toda
+                    maquinaria vial y minera en toda
                     <span className="text-white font-bold"> la Argentina</span>.
                     Nuestra logística está diseñada para responder rápido,
                     incluso en
@@ -553,7 +553,7 @@ const Home = () => {
                       },
                       {
                         title: "Protección y Embalaje Especializado",
-                        desc: "Protocolos de embalaje para repuestos de maquinaria pesada",
+                        desc: "Protocolos de embalaje para repuestos de maquinaria vial y minera",
                         icon: "🛡️",
                         features: [
                           "Embalaje anti-impacto",
@@ -940,7 +940,7 @@ const Home = () => {
                   {/* Imagen con animación mejorada */}
                   <AnimatedImage
                     src={maquinariaImg2}
-                    alt="Excavadora de obra - Maquinaria vial pesada - DP DISTRIBUIDORA"
+                    alt="Excavadora de obra - Maquinaria vial y minera pesada - DP DISTRIBUIDORA"
                     className="relative w-120 xl:w-150 opacity-95 drop-shadow-2xl transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700"
                     animation="slideLeft"
                     delay={300}
@@ -976,7 +976,7 @@ const Home = () => {
                   {/* Imagen con animación mejorada */}
                   <AnimatedImage
                     src={maquinariaImg}
-                    alt="Motoniveladora - Maquinaria vial pesada - DP DISTRIBUIDORA"
+                    alt="Motoniveladora - Maquinaria vial y minera pesada - DP DISTRIBUIDORA"
                     className="relative w-120 xl:w-150 opacity-95 drop-shadow-2xl transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700"
                     animation="slideRight"
                     delay={500}
@@ -1357,7 +1357,7 @@ const Home = () => {
                     <div className="flex items-center gap-3">
                       <CheckCircle className="text-yellow-500" size={20} />
                       <span className="text-sm font-medium">
-                        Repuestos originales y alternativos
+                        Repuestos alternativos calidad OEM
                       </span>
                     </div>
                   </div>

@@ -1,6 +1,6 @@
 import SEO from "../components/SEO";
 import emailjs from "@emailjs/browser";
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { 
   Phone, 
   Mail, 
@@ -48,7 +48,47 @@ const Contact = () => {
       }));
     }
   };
+// Componente de animación FadeIn
+const FadeInSection = ({ children, delay = 0 }) => {
+  const [isVisible, setVisible] = useState(false);
+  const domRef = useRef(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (domRef.current) {
+      observer.observe(domRef.current);
+    }
+
+    return () => {
+      if (domRef.current) {
+        observer.unobserve(domRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={domRef}
+      className={`transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+};
   const validateForm = () => {
     const newErrors = {};
     
@@ -122,9 +162,9 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Teléfono",
-      value: "+54 9 3764 22-2222",
+      value: "+54 9 3765 377866",
       description: "Llamanos de Lunes a Viernes",
-      action: "tel:+5493764222222",
+      action: "tel:+5493765377866",
       color: "bg-green-500/10 border-green-500/20",
       iconColor: "text-green-600"
     },
@@ -165,6 +205,8 @@ const Contact = () => {
     "Otro"
   ];
 
+
+
   return (
     <>
       <SEO
@@ -175,6 +217,7 @@ const Contact = () => {
       />
 
       {/* ============ HERO CONTACTO ============ */}
+      <FadeInSection delay={200}>
       <section className="relative py-20 md:py-28 overflow-hidden bg-linear-to-br from-gray-900 via-black to-gray-900 text-white">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-yellow-500 to-transparent"></div>
@@ -229,6 +272,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      </FadeInSection>
 
       {/* ============ FORMULARIO DE CONTACTO ============ */}
       <section className="relative py-20 bg-white">
@@ -602,6 +646,8 @@ const Contact = () => {
         </div>
       </section>
 
+      
+
       {/* ============ MAPA UBICACIÓN ============ */}
       <section className="relative py-10 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -635,13 +681,15 @@ const Contact = () => {
               <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div>
                   <h4 className="font-bold text-gray-900">DP Distribuidora S.R.L.</h4>
-                  <p className="text-gray-600">Distribuidores oficiales de repuestos para maquinaria vial</p>
+                  <p className="text-gray-600">Distribuidores oficiales de repuestos para maquinaria vial y minera</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      
     </>
   );
 };

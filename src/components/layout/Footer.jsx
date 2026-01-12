@@ -49,7 +49,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/nosotros" className="hover:text-yellow-400 transition">
+              <a href="/sobre-nosotros" className="hover:text-yellow-400 transition">
                 Nosotros
               </a>
             </li>
@@ -78,22 +78,6 @@ const Footer = () => {
               <Mail size={16} className="shrink-0"/>
               <span>info@dpdistribuidora.com.ar</span>
             </li>
-            <li className="flex items-center gap-3">
-              <Mail size={16} className="shrink-0"/>
-              <span>ventas@dpdistribuidora.com.ar</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <Mail size={16} className="shrink-0"/>
-              <span>repuestos@dpdistribuidora.com.ar</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <Mail size={16} className="shrink-0" />
-              <span>administracion@dpdistribuidora.com.ar</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <Mail size={16} className="shrink-0" />
-              <span>johann.plaza@dpdistribuidora.com.ar</span>
-            </li>
           </ul>
         </div>
 
@@ -113,9 +97,10 @@ const Footer = () => {
       </div>
 
       {/* BARRA INFERIOR */}
-      <div className="border-t border-gray-800 py-6 text-center text-gray-300 text-sm">
+      <div className="border-t flex flex-col md:flex-row justify-around border-gray-800 py-6 text-center text-gray-300 text-sm">
         © {new Date().getFullYear()} DP Distribuidora — Repuestos de Maquinaria
         Vial Pesada
+        <p className="mt-5 text-xs">developed by <a href="https://pablobarriosportfolio-blond.vercel.app/" target="_blank" className="text-blue-500">PBX Digital</a></p>
       </div>
     </footer>
   );

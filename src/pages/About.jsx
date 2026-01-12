@@ -101,40 +101,6 @@ const values = [
   },
 ];
 
-// Timeline de la empresa
-const timeline = [
-  {
-    year: "2008",
-    title: "Inicios",
-    description:
-      "Fundación de DP Distribuidora con el objetivo de brindar soluciones confiables para maquinaria vial.",
-  },
-  {
-    year: "2012",
-    title: "Expansión de Marcas",
-    description:
-      "Ampliación de nuestro catálogo para incluir las principales marcas internacionales del sector.",
-  },
-  {
-    year: "2016",
-    title: "Base de Manuales",
-    description:
-      "Implementación de la base completa de manuales de partes para todos los modelos y equipos.",
-  },
-  {
-    year: "2020",
-    title: "Cobertura Nacional",
-    description:
-      "Expansión logística para ofrecer envíos a todo el país con tiempos optimizados.",
-  },
-  {
-    year: "2024",
-    title: "Servicio Integral",
-    description:
-      "Consolidación como proveedor integral con soporte técnico especializado y asesoramiento completo.",
-  },
-];
-
 const About = () => {
   return (
     <>
@@ -545,27 +511,56 @@ const About = () => {
                 </div>
 
                 <h4 className="font-bold text-gray-900 mb-2">Contacto</h4>
-                <p className="text-sm text-gray-500 mb-4">
+                <p className="text-sm text-gray-500 mb-6">
                   Canales de atención por área
                 </p>
 
-                <div className="max-h-40 overflow-y-auto text-center px-2 space-y-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
-                  <p className="text-sm text-gray-600">
-                    📩 info@dpdistribuidora.com.ar
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    📩 ventas@dpdistribuidora.com.ar
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    📩 repuestos@dpdistribuidora.com.ar
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    📩 administracion@dpdistribuidora.com.ar
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    📩 johann.plaza@dpdistribuidora.com.ar
-                  </p>
-                </div>
+                <ul className="space-y-4 text-left">
+                  <li>
+                    <span className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+                      Información General
+                    </span>
+                    <span className="text-sm text-gray-700">
+                      info@dpdistribuidora.com.ar
+                    </span>
+                  </li>
+
+                  <li>
+                    <span className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+                      Ventas
+                    </span>
+                    <span className="text-sm text-gray-700">
+                      ventas@dpdistribuidora.com.ar
+                    </span>
+                  </li>
+
+                  <li>
+                    <span className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+                      Repuestos
+                    </span>
+                    <span className="text-sm text-gray-700">
+                      repuestos@dpdistribuidora.com.ar
+                    </span>
+                  </li>
+
+                  <li>
+                    <span className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+                      Administración
+                    </span>
+                    <span className="text-sm text-gray-700">
+                      administracion@dpdistribuidora.com.ar
+                    </span>
+                  </li>
+
+                  <li>
+                    <span className="block text-xs font-semibold text-gray-500 uppercase mb-1">
+                      Contacto Directo
+                    </span>
+                    <span className="text-sm text-gray-700">
+                      johann.plaza@dpdistribuidora.com.ar
+                    </span>
+                  </li>
+                </ul>
               </div>
 
               {/* CTA final */}

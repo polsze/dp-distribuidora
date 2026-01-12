@@ -65,7 +65,7 @@ const productTypes = [
     id: 1,
     name: "Sistemas de Motor",
     category: "Motor y Transmisión",
-    description: "Repuestos completos para motores de maquinaria pesada. Garantizamos máxima potencia y eficiencia.",
+    description: "Repuestos completos para motores de maquinaria vial y minera. Garantizamos máxima potencia y eficiencia.",
     icon: Settings,
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-500/5",
@@ -326,8 +326,8 @@ const Products = () => {
                 Tipos de Repuestos Disponibles
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                Distribuimos una amplia variedad de repuestos para todas las necesidades 
-                de mantenimiento y reparación de maquinaria vial
+                Distribuimos una amplia variedad de repuestos calidad OEM para todas las necesidades 
+                de mantenimiento y reparación de maquinaria vial y minera
               </p>
             </div>
           </FadeInSection>
@@ -593,7 +593,7 @@ const Products = () => {
 
             <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
               Nuestro equipo técnico puede asesorarlo sobre el repuesto adecuado 
-              para su maquinaria, incluso para modelos especiales o de difícil acceso.
+              para su maquinaria vial y minera, incluso para modelos especiales o de difícil acceso.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
