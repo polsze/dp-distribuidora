@@ -99,7 +99,7 @@ const Footer = () => {
       {/* BARRA INFERIOR */}
       <div className="border-t flex flex-col items-center md:flex-row justify-around border-gray-800 py-6 text-center text-gray-300 text-sm">
         © {new Date().getFullYear()} DP Distribuidora — Repuestos de Maquinaria
-        Vial Pesada
+        Vial y Minera
         <p className="mt-5 md:mt-0 text-xs">developed by <a href="https://pablobarriosportfolio-blond.vercel.app/" target="_blank" className="text-blue-500">PBX Digital</a></p>
       </div>
     </footer>
