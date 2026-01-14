@@ -405,7 +405,7 @@ const About = () => {
                         {" "}
                         base completa de manuales de partes
                       </span>{" "}
-                      &bnsp; para todos los modelos y equipos. Esto nos permite
+                      &nbsp; para todos los modelos y equipos. Esto nos permite
                       garantizar soluciones rápidas, precisas y confiables.
                     </p>
 
