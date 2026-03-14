@@ -17,8 +17,7 @@ const Footer = () => {
 
           {/* DESCRIPCIÓN */}
           <p className="leading-relaxed text-center">
-            Especialistas en repuestos para maquinaria vial y minera.
-            Distribución desde Misiones a todo el país.
+          Especialistas en repuestos y maquinaria pesada. Distribución desde Misiones a todo el país.
           </p>
           {/* REDES SOCIALES */}
           <div className="mt-6 flex justify-center">

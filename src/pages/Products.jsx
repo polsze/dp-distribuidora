@@ -17,7 +17,8 @@ import {
   Droplets
 } from "lucide-react";
 
-// Componente de animación FadeIn
+
+
 const FadeInSection = ({ children, delay = 0 }) => {
   const [isVisible, setVisible] = useState(false);
   const domRef = useRef(null);
@@ -254,7 +255,7 @@ const Products = () => {
   return (
     <>
       <SEO
-        title="Tipos de Repuestos | DP Distribuidora"
+        title="Tipos de Maquinaria y Repuestos | DP Distribuidora"
         description="Distribuimos todo tipo de repuestos para maquinaria vial y minera"
         keywords="tipos repuestos maquinaria, sistemas motor, hidráulica maquinaria, tren rodante, repuestos eléctricos, maquinaria vial, maquinaria minera"
         canonical="https://dpdistribuidora.com.ar/productos"
@@ -313,6 +314,637 @@ const Products = () => {
               </div>
             </div>
           </FadeInSection>
+        </div>
+      </section>
+
+                        {/* ============ NUEVA SECCIÓN: MAQUINARIA INCORPORADA ============ */}
+      <section className="relative py-20 overflow-hidden bg-linear-to-b from-gray-900 via-black to-gray-900 text-white">
+        {/* EFECTOS DE FONDO */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-yellow-500 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-yellow-500 to-transparent"></div>
+          <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/2 right-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl"></div>
+          
+          {/* Patrón de puntos decorativo */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, #f59e0b 1px, transparent 0)`,
+              backgroundSize: "40px 40px",
+            }}
+          ></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4">
+          {/* ENCABEZADO */}
+          <FadeInSection delay={200}>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-3 mb-6 px-6 py-2 bg-yellow-500/10 border border-yellow-500/30 rounded-full backdrop-blur-sm">
+                <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+                <span className="text-yellow-400 font-semibold tracking-wide">
+                  NUEVA LÍNEA DE MAQUINARIA
+                </span>
+                <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="bg-linear-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent">
+                  Ampliamos Nuestro Catálogo
+                </span>
+                <br />
+                <span className="text-white">con Maquinaria Pesada</span>
+              </h2>
+
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Incorporamos <span className="text-yellow-400 font-semibold">9 nuevas líneas de maquinaria</span> de las marcas 
+                <span className="text-white font-bold"> LGMG y BAMAC</span> para ofrecer soluciones integrales en 
+                los rubros más exigentes.
+              </p>
+            </div>
+          </FadeInSection>
+
+          {/* FILTRO DE RUBROS (PILLS) */}
+          <FadeInSection delay={250}>
+            <div className="flex flex-wrap justify-center gap-3 mb-16">
+              {[
+                "VIAL",
+                "MOVIMIENTO DE SUELO",
+                "CONSTRUCCIÓN",
+                "AGRO",
+                "INDUSTRIAL",
+                "MINERÍA",
+                "ELEVACIÓN",
+                "ENERGÍA",
+                "FUSIONADORES",
+              ].map((rubro, index) => (
+                <span
+                  key={index}
+                  className="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-medium text-gray-300 hover:bg-yellow-500/20 hover:border-yellow-500/30 hover:text-yellow-300 transition-all duration-300"
+                >
+                  {rubro}
+                </span>
+              ))}
+            </div>
+          </FadeInSection>
+
+          {/* GRID DE MAQUINARIAS (TARJETAS) */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Manipuladores Telescópicos - LGMG */}
+            <FadeInSection delay={300}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>                      
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Manipuladores Telescópicos
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-sm text-center leading-tight px-2">
+                          LGMG
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Versatilidad y alcance superior para trabajos en altura y carga en obras de construcción e industriales.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Alcance superior para trabajos en altura</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Sistema de estabilización hidráulica</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Múltiples implementos disponibles</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        ELEVACIÓN • CONSTRUCCIÓN
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20el%20Manipulador%20Telescópico%20LGMG.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Pala Cargadora - BAMAC */}
+            <FadeInSection delay={350}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Pala Cargadora
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-lg">BAMAC</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Robustez y eficiencia para carga de materiales en obras viales, minería y movimiento de suelos.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Alta capacidad de carga y excavación</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Sistema hidráulico de alto rendimiento</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Maniobrabilidad en espacios reducidos</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        VIAL • MOVIMIENTO DE SUELO • MINERÍA
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20la%20Pala%20Cargadora%20BAMAC.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Motoniveladora - BAMAC */}
+            <FadeInSection delay={400}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Motoniveladora
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-lg">BAMAC</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Precisión y potencia para nivelación de terrenos, conformación de taludes y mantenimiento de caminos.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Sistema de nivelación de precisión</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Hoja con múltiples posiciones</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Control de inclinación y profundidad</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        VIAL • CONSTRUCCIÓN • MOVIMIENTO DE SUELO
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20la%20Motoniveladora%20BAMAC.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Rodillo Compactador - BAMAC */}
+            <FadeInSection delay={450}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Rodillo Compactador
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-lg">BAMAC</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Compactación eficiente de suelos, asfalto y bases granulares para obras viales y construcción.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Sistema de compactación de alta eficiencia</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Doble tambor / Neumáticos</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Sistema de riego para asfalto</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        VIAL • CONSTRUCCIÓN • MOVIMIENTO DE SUELO
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20el%20Rodillo%20Compactador%20BAMAC.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Torre de Iluminación - BAMAC */}
+            <FadeInSection delay={500}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Torre de Iluminación
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-lg">BAMAC</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Iluminación LED de alta potencia para obras nocturnas, eventos y operaciones mineras con máxima eficiencia.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Mástil telescópico extensible</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Iluminación LED / Halógena</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Generador incorporado / Autonomía extendida</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        ENERGÍA • CONSTRUCCIÓN • MINERÍA
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20la%20Torre%20de%20Iluminación%20BAMAC.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Generadores Eléctricos - BAMAC */}
+            <FadeInSection delay={550}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Generadores Eléctricos
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-lg">BAMAC</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Potencia confiable para obras, industrias y eventos. Equipos silenciados de bajo consumo y alta durabilidad.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Alta eficiencia energética</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Diésel / Gas / Bifuel</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Transferencia automática (ATS)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        ENERGÍA • INDUSTRIAL • CONSTRUCCIÓN
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20Generadores%20Eléctricos%20BAMAC.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Excavadora - BAMAC */}
+            <FadeInSection delay={600}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Excavadora
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-lg">BAMAC</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Máxima productividad en excavación, zanjeo y movimiento de materiales en obras de gran porte.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Gran profundidad de excavación</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Sistema de rotación 360°</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Múltiples baldes e implementos</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        MINERÍA • MOVIMIENTO DE SUELO • CONSTRUCCIÓN
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20la%20Excavadora%20BAMAC.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Minicargadora - BAMAC */}
+            <FadeInSection delay={650}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Minicargadora
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-lg">BAMAC</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Versatilidad y maniobrabilidad para trabajos en espacios reducidos. Múltiples implementos disponibles.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Diseño compacto para espacios reducidos</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Sistema de acople rápido</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Amplia variedad de implements</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        CONSTRUCCIÓN • AGRO • INDUSTRIAL
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20la%20Minicargadora%20BAMAC.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Autoelevador - BAMAC */}
+            <FadeInSection delay={700}>
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-linear-to-br from-yellow-500/20 to-yellow-600/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 group-hover:border-yellow-500/40 transition-all duration-500 transform group-hover:-translate-y-2">
+                  <div className="p-8">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+                          Autoelevador
+                        </h3>
+                      </div>
+                      {/* RECTÁNGULO DE MARCA MÁS GRANDE */}
+                      <div className="w-20 h-20 rounded-xl bg-linear-to-br from-yellow-500 to-yellow-600 flex items-center justify-center shadow-lg">
+                        <span className="text-black font-bold text-lg">BAMAC</span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      Soluciones de elevación para logística, depósitos y operaciones industriales con máxima seguridad.
+                    </p>
+                    
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Mástil de elevación resistente</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Diésel / Eléctrico / GLP</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
+                        <span className="text-sm text-gray-300">Horquillas ajustables / Implementos</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                      <span className="text-xs text-yellow-400 font-semibold uppercase tracking-wider">
+                        INDUSTRIAL • LOGÍSTICA • FUSIONADORES
+                      </span>
+                      <a
+                        href={`https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20estoy%20interesado%20en%20el%20Autoelevador%20BAMAC.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-yellow-500/20 transition-colors"
+                      >
+                        <span className="text-yellow-400">→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeInSection>
+          </div>
+
+          {/* BOTÓN DE ACCIÓN Y DESCARGA */}
+          <FadeInSection delay={800}>
+            <div className="mt-20 text-center">
+              <div className="relative inline-block">
+                <div className="absolute -inset-4 bg-linear-to-r from-yellow-500 via-yellow-600 to-yellow-500 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
+                
+                <a
+                  href="https://wa.me/5493765377866?text=Hola%20DP%20Distribuidora,%20quiero%20consultar%20por%20la%20nueva%20línea%20de%20maquinaria%20LGMG%20y%20BAMAC."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative inline-flex items-center justify-center gap-4 bg-linear-to-r from-yellow-500 via-yellow-600 to-yellow-500 text-gray-900 px-16 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300 group"
+                >
+                  <span className="relative z-10">Consultar Disponibilidad</span>
+                  <span className="relative z-10 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition">
+                    →
+                  </span>
+                  
+                  <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                </a>
+                
+                <p className="mt-6 text-gray-400 font-medium">
+                  <span className="text-yellow-400 font-bold">9 nuevas líneas</span> de maquinaria incorporadas • 
+                  <span className="text-yellow-400 font-bold"> LGMG</span> y <span className="text-yellow-400 font-bold">BAMAC</span> • 
+                  Asesoramiento personalizado
+                </p>
+              </div>
+            </div>
+          </FadeInSection>
+
+          {/* NOTA DE EXPANSIÓN */}
+          <FadeInSection delay={900}>
+            <div className="mt-16 pt-12 border-t border-white/10 text-center">
+              <div className="inline-flex items-center gap-4 text-gray-400">
+                <div className="flex-1 h-px bg-linear-to-r from-transparent via-yellow-500/30 to-transparent w-20"></div>
+                <span className="text-sm font-medium tracking-wider">
+                  🚀 DP DISTRIBUIDORA EXPANDE SU CATÁLOGO • AHORA TAMBIÉN VENDEMOS MAQUINARIA PESADA
+                </span>
+                <div className="flex-1 h-px bg-linear-to-r from-transparent via-yellow-500/30 to-transparent w-20"></div>
+              </div>
+            </div>
+          </FadeInSection>
+        </div>
+
+        {/* Efecto de partículas flotantes */}
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-yellow-400/20 rounded-full animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${i * 0.3}s`,
+                animationDuration: `${3 + Math.random() * 4}s`,
+              }}
+            ></div>
+          ))}
         </div>
       </section>
 
