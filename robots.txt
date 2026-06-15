@@ -1,12 +1,4 @@
 User-agent: *
 Allow: /
 
-# Bloqueo de rutas basura
-Disallow: /app
-Disallow: /faq
-Disallow: /#! 
-Disallow: /*?*
-Disallow: /*#
-
-# Sitemap
 Sitemap: https://dpdistribuidora.com.ar/sitemap.xml
